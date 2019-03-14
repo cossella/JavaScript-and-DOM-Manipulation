@@ -18,13 +18,13 @@ var button = d3.select("filter-btn")
 
 
 function clickSelect(){
-    //don't refresh the page!
+   
     d3.event.preventDefault();
-    //print the value that was input
+   
     console.log(dateInputText.property("value"));
-    //create a new table showing only the filterd data
+
     var new_table = tableData.filter(sighting => sighting.datetime===dateInputText.property("value"))
-    //display the new table
+
     displayData(new_table);
 }
 
